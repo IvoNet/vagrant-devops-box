@@ -17,7 +17,7 @@ deactivate() {
 
     if [ ! "${1-}" = "nondestructive" ] ; then
         unset ssh_me_gently
-        unalias devops box box1 box2 box3 box4 sshd
+        unalias devops box box1 box2 box3 box4 sshd mkube mini
         unset -f deactivate
     fi
 }
@@ -37,6 +37,8 @@ alias box2='ssh_me_gently 12'
 alias box3='ssh_me_gently 13'
 alias box4='ssh_me_gently 14'
 alias sshd='ssh_me_gently'
+alias mkube='minikube'
+alias mini='minikube'
 
 _OLD_DEVOPS_BOX_PATH="$PATH"
 PATH="$DEVOPS_BOX/bin:$PATH"
@@ -69,6 +71,7 @@ Some convenience methods and commands have been made available:
 * ssh_me_gently [number] -> IP Range is: 192.168.10.* -> (100, [11-14]) e.g. ssh_me_gently 100
 * sshd [number]          -> see ssh_me_gently
 * deactivate             -> deactivates the DevOps box environment
+* mkube / mini           -> aliases for minikube
 
 The bin folder of this project has been added to the PATH so you can add new commands to it if you wish
 
