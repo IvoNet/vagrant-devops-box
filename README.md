@@ -24,7 +24,7 @@ source ./activate
 It will set paths and aliasses correct for that terminal session. 
 The prompt will be adjusted to show if activated.
 
-Clone this repository and in a terminal and from that repo:
+Clone this repository and in a terminal and from that repo...
 
 To provision the devops-box:
 
