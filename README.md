@@ -6,6 +6,7 @@ This vagrant image is created for getting easy access to devops tools like:
 * Terraform
 * Packer
 * Docker
+* aws-cli
 
 # Prerequisites
 
@@ -13,15 +14,15 @@ On host machine:
 * VirtualBox 
 * Vagrant 
 
-## Usage
+# Usage
 
-Always run the following command to make life easier:
+Always run the following command in the terminal to make life easier:
 
 ```bash
 source ./ssh-setup
 ```
 
-clone this repository and in a terminal from that repo:
+Clone this repository and in a terminal and from that repo:
 
 To provision the devops-box:
 
@@ -32,9 +33,10 @@ vagrant up
 To get easy access to the box:
 
 ```bash
-source ./ssh-setup
 devbox
 ```
+
+if you ran `source ./ssh-setup` :-))
 
 # Shared folder(s)
 
