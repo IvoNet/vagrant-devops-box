@@ -73,7 +73,7 @@ Some convenience methods and commands have been made available:
 * deactivate             -> deactivates the DevOps box environment
 * mkube / mini           -> aliases for minikube
 
-The bin folder of this project has been added to the PATH so you can add new commands to it if you wish
+The 'bin' folder of this project has been added to the PATH so you can add new commands to it if you wish
 
 Note:
   Do not forget to 'vagrant up' the devops-box as it is not part of the activation process
