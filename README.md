@@ -56,7 +56,7 @@ vagrant up
 ```
 
 It will create 4 ubuntu test-machines named machine[1-4] with
-IP range between 192.168.2.11-14.
+IP range between 192.168.2.[11-14].
 
 ssh into a test-machine by running one of these commands: `box1`, `box2`,...
 
