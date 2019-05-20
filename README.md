@@ -55,17 +55,10 @@ If you need some test machines to play with just change directory to the
 vagrant up
 ```
 
-it will create 4 ubuntu test-machines named machine[1-4] with
+It will create 4 ubuntu test-machines named machine[1-4] with
 IP range between 192.168.2.11-14.
 
-ssh into a machine by running one of these commands:
-
-```bash
-ssh_me_gently 11
-ssh_me_gently 12
-ssh_me_gently 13
-ssh_me_gently 14
-```
+ssh into a test-machine by running one of these commands: `box1`, `box2`,...
 
 ---
 # License
