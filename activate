@@ -17,7 +17,7 @@ deactivate() {
 
     if [ ! "${1-}" = "nondestructive" ] ; then
         unset ssh_me_gently
-        unalias devops box box1 box2 box3 box4 sshd mkube mini
+        unalias devops box box1 box2 box3 box4 sshd mkube mini vag vagu vagd vags vagr
         unset -f deactivate
     fi
 }
@@ -39,6 +39,11 @@ alias box4='ssh_me_gently 14'
 alias sshd='ssh_me_gently'
 alias mkube='minikube'
 alias mini='minikube'
+alias vagu='vagrant up'
+alias vagd='vagrant destroy -f'
+alias vags='vagrant suspend'
+alias vagr='vagrant resume'
+alias vag='vagrant'
 
 _OLD_DEVOPS_BOX_PATH="$PATH"
 PATH="$DEVOPS_BOX/bin:$PATH"
@@ -67,11 +72,16 @@ This terminal session has been activated for the DevOps Box environment.
 Some convenience methods and commands have been made available:
 
 * box                    -> will connect to the devops-box (number 100)
-* box1-4                 -> will connect respectively to test machine1 through 4
+* box[1-4]               -> will connect respectively to test machine1 through 4
 * ssh_me_gently [number] -> IP Range is: 192.168.10.* -> (100, [11-14]) e.g. ssh_me_gently 100
-* sshd [number]          -> see ssh_me_gently
-* deactivate             -> deactivates the DevOps box environment
+* sshd [number]          -> ssh_me_gently [number]
 * mkube / mini           -> aliases for minikube
+* vag                    -> alias for vagrant
+* vagu                   -> vagrant up
+* vagd                   -> vagrant destroy
+* vags                   -> vagrant suspend
+* vagr                   -> vagrant resume
+* deactivate             -> deactivates the DevOps box environment
 
 The 'bin' folder of this project has been added to the PATH so you can add new commands to it if you wish
 
