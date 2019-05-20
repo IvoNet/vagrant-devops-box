@@ -35,7 +35,7 @@ vagrant up
 To get easy access to the box:
 
 ```bash
-devbox
+box
 ```
 
 if you ran `source ./activate` :-))
