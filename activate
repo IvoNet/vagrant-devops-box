@@ -17,7 +17,7 @@ deactivate() {
 
     if [ ! "${1-}" = "nondestructive" ] ; then
         unset ssh_me_gently
-        unalias devops box box11 box12 box13 box14 sshd
+        unalias devops box box1 box2 box3 box4 sshd
         unset -f deactivate
     fi
 }
@@ -32,10 +32,10 @@ ssh_me_gently() {
 }
 alias devops='ssh_me_gently 100'
 alias box='ssh_me_gently 100'
-alias box11='ssh_me_gently 11'
-alias box12='ssh_me_gently 12'
-alias box13='ssh_me_gently 13'
-alias box14='ssh_me_gently 14'
+alias box1='ssh_me_gently 11'
+alias box2='ssh_me_gently 12'
+alias box3='ssh_me_gently 13'
+alias box4='ssh_me_gently 14'
 alias sshd='ssh_me_gently'
 
 _OLD_DEVOPS_BOX_PATH="$PATH"
@@ -58,3 +58,20 @@ fi
 if [ -n "${BASH-}" ] || [ -n "${ZSH_VERSION-}" ] ; then
     hash -r 2>/dev/null
 fi
+
+cat <<'EOT'
+This terminal session has been activated for the DevOps Box environment.
+
+Some convenience methods and commands have been made available:
+
+* box                    -> will connect to the devops-box (number 100)
+* box1-4                 -> will connect respectively to test machine1 through 4
+* ssh_me_gently [number] -> IP Range is: 192.168.10.* -> (100, [11-14]) e.g. ssh_me_gently 100
+* sshd [number]          -> see ssh_me_gently
+* deactivate             -> deactivates the DevOps box environment
+
+The bin folder of this project has been added to the PATH so you can add new commands to it if you wish
+
+Note:
+  Do not forget to 'vagrant up' the devops-box as it is not part of the activation process
+EOT
