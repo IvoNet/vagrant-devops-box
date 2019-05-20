@@ -19,8 +19,10 @@ On host machine:
 Always run the following command in the terminal to make life easier:
 
 ```bash
-source ./ssh-setup
+source ./activate
 ```
+It will set paths and aliasses correct for that terminal session. 
+The prompt will be adjusted to show if activated.
 
 Clone this repository and in a terminal and from that repo:
 
@@ -36,7 +38,7 @@ To get easy access to the box:
 devbox
 ```
 
-if you ran `source ./ssh-setup` :-))
+if you ran `source ./activate` :-))
 
 # Shared folder(s)
 
