@@ -6,10 +6,11 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
   config.vm.network "private_network", ip: "192.168.10.100"
   config.vm.synced_folder "./", "/project"
+  config.vm.hostname "devops-box"
   config.vm.provider "virtualbox" do |vb|
     vb.gui = false
     vb.memory = "4096"
-    vb.name = "ansible"
+    vb.name = "devops-box"
     vb.cpus = 2
   end
   # Copy your own ssh config to your
